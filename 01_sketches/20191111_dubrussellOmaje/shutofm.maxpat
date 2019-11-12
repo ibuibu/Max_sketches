@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 48.0, 110.0, 1393.0, 844.0 ],
+		"rect" : [ 37.0, 92.0, 1393.0, 706.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,19 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1539.0, 1034.0, 100.0, 22.0 ],
+					"style" : "",
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-113",
 					"maxclass" : "newobj",
@@ -2221,8 +2234,8 @@
 										"basictuning" : 440,
 										"followglobaltempo" : 0,
 										"formantcorrection" : 0,
-										"loopend" : [ 2967.0, "ms" ],
-										"loopstart" : [ 2750.0, "ms" ],
+										"loopend" : [ 987.0, "ms" ],
+										"loopstart" : [ 680.0, "ms" ],
 										"mode" : "basic",
 										"originallength" : [ 3839.999816, "ticks" ],
 										"originaltempo" : 120.0,
@@ -3559,9 +3572,9 @@
 							}
 , 							{
 								"box" : 								{
-									"addpoints" : [ 0.0, 24.0, 0, 0.539399, 5.76, 0, 2.966691, 1.92, 0, 26.160816, 0.0, 0 ],
+									"addpoints" : [ 0.0, 24.0, 0, 3.845187, 5.76, 0, 21.148501, 1.92, 0, 186.491295, 0.0, 0 ],
 									"bgcolor" : [ 0.177364, 0.211948, 0.248279, 1.0 ],
-									"domain" : 26.159063,
+									"domain" : 186.478516,
 									"gridcolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
 									"id" : "obj-694",
 									"linecolor" : [ 0.693774, 0.879819, 0.091358, 1.0 ],
@@ -6498,6 +6511,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"source" : [ "obj-40", 0 ]
 				}
@@ -6602,7 +6622,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-48", 0 ],
+					"destination" : [ "obj-48", 1 ],
 					"source" : [ "obj-50", 0 ]
 				}
 
@@ -7368,30 +7388,30 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-94::obj-30" : [ "live.gain~[6]", "2", 0 ],
-			"obj-94::obj-13" : [ "live.gain~[11]", "8", 0 ],
-			"obj-94::obj-124" : [ "live.gain~[13]", "9", 0 ],
-			"obj-12::obj-3" : [ "Regen", "Regen", 0 ],
-			"obj-691" : [ "live.grid", "live.grid", 0 ],
-			"obj-94::obj-42" : [ "live.gain~[8]", "4", 0 ],
-			"obj-12::obj-28" : [ "Size", "Size", 0 ],
-			"obj-17" : [ "live.grid[2]", "live.grid", 0 ],
-			"obj-94::obj-80" : [ "live.gain~[1]", "5", 0 ],
-			"obj-12::obj-62" : [ "Dry", "Dry", 0 ],
-			"obj-94::obj-25" : [ "live.gain~[5]", "master", 0 ],
-			"obj-12::obj-66" : [ "Time", "Time", 0 ],
-			"obj-79" : [ "live.grid[1]", "live.grid", 0 ],
-			"obj-94::obj-6" : [ "live.gain~[10]", "6", 0 ],
-			"obj-12::obj-65" : [ "Spread", "Spread", 0 ],
-			"obj-94::obj-10" : [ "live.gain~[9]", "7", 0 ],
-			"obj-12::obj-23" : [ "bypass", "bypass", 0 ],
-			"obj-94::obj-36" : [ "live.gain~[7]", "3", 0 ],
-			"obj-12::obj-63" : [ "Early", "Early", 0 ],
-			"obj-51" : [ "live.grid[3]", "live.grid", 0 ],
-			"obj-94::obj-18" : [ "live.gain~", "1", 0 ],
-			"obj-94::obj-121" : [ "live.gain~[12]", "10", 0 ],
 			"obj-12::obj-60" : [ "Damp", "Damp", 0 ],
-			"obj-12::obj-64" : [ "Tail", "Tail", 0 ]
+			"obj-12::obj-64" : [ "Tail", "Tail", 0 ],
+			"obj-94::obj-10" : [ "live.gain~[9]", "7", 0 ],
+			"obj-691" : [ "live.grid", "live.grid", 0 ],
+			"obj-94::obj-6" : [ "live.gain~[10]", "6", 0 ],
+			"obj-12::obj-66" : [ "Time", "Time", 0 ],
+			"obj-94::obj-30" : [ "live.gain~[6]", "2", 0 ],
+			"obj-12::obj-3" : [ "Regen", "Regen", 0 ],
+			"obj-79" : [ "live.grid[1]", "live.grid", 0 ],
+			"obj-94::obj-121" : [ "live.gain~[12]", "10", 0 ],
+			"obj-17" : [ "live.grid[2]", "live.grid", 0 ],
+			"obj-12::obj-28" : [ "Size", "Size", 0 ],
+			"obj-94::obj-124" : [ "live.gain~[13]", "9", 0 ],
+			"obj-12::obj-62" : [ "Dry", "Dry", 0 ],
+			"obj-94::obj-80" : [ "live.gain~[1]", "5", 0 ],
+			"obj-12::obj-23" : [ "bypass", "bypass", 0 ],
+			"obj-94::obj-42" : [ "live.gain~[8]", "4", 0 ],
+			"obj-94::obj-36" : [ "live.gain~[7]", "3", 0 ],
+			"obj-51" : [ "live.grid[3]", "live.grid", 0 ],
+			"obj-12::obj-65" : [ "Spread", "Spread", 0 ],
+			"obj-94::obj-18" : [ "live.gain~", "1", 0 ],
+			"obj-94::obj-13" : [ "live.gain~[11]", "8", 0 ],
+			"obj-12::obj-63" : [ "Early", "Early", 0 ],
+			"obj-94::obj-25" : [ "live.gain~[5]", "master", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -7402,14 +7422,14 @@
 			}
 , 			{
 				"name" : "simpleSine.maxpat",
-				"bootpath" : "D:/01_programming/02_MAX/01_original/01_sketches/20191111_dubrussellOmaje",
+				"bootpath" : "~/Desktop/ALL/01_PROGRAM/18_MAX/Max_sketches/01_sketches/20191111_dubrussellOmaje",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mixer3.maxpat",
-				"bootpath" : "D:/01_programming/02_MAX/01_original/00_libraries/04_mixer",
+				"bootpath" : "~/Desktop/ALL/01_PROGRAM/18_MAX/Max_sketches/00_libraries/04_mixer",
 				"patcherrelativepath" : "../../00_libraries/04_mixer",
 				"type" : "JSON",
 				"implicit" : 1
